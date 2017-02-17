@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.frido.rando">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        <activity
+            android:name="com.frido.rando.SignIn"
+            android:label="@string/app_name" />
+        <activity android:name="com.frido.rando.Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.frido.MainPictureDisplay"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_main_picture_display"
+            android:parentActivityName="com.frido.rando.Home"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.frido.rando.Home" />
+        </activity>
+        <activity
+            android:name="com.frido.rando.ImageViewFullscreen"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_image_view_fullscreen"
+            android:parentActivityName="com.frido.rando.MainPictureDisplay"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.frido.rando.MainPictureDisplay" />
+        </activity>
+        <activity android:name="com.frido.rando.History"
+            android:theme="@android:style/Theme.Material.Light"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.mobile.frido.rando.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="DATABASE"
+            android:value="rando.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="2" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.example.frido.rando" />
+
+    </application>
+
+</manifest>

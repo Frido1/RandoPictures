@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "504899060769",
+    "firebase_url": "https://randopictures-3ad29.firebaseio.com",
+    "project_id": "randopictures-3ad29",
+    "storage_bucket": "randopictures-3ad29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504899060769:android:7b88147eb3880d3c",
+        "android_client_info": {
+          "package_name": "com.frido.rando"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504899060769-h9mri3vtlb5sd4nbpg4sj4bv5r6o6lus.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.frido.rando",
+            "certificate_hash": "6CD9C558E9A583265231F522D1D3B6806F36A7AF"
+          }
+        },
+        {
+          "client_id": "504899060769-tmlp8i5u5sk6c2ccngmtog9jk3737ns2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNGapT6crjSerywlKotSvovQvR2hO05eM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504899060769-tmlp8i5u5sk6c2ccngmtog9jk3737ns2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
