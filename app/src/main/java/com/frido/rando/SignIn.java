@@ -89,7 +89,7 @@ public class SignIn extends Activity implements GoogleApiClient.OnConnectionFail
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .requestIdToken(getString(R.string.web_client_id))
-        .build();
+                .build();
         // [END configure_signin]
 
         // [START build_client]
@@ -146,6 +146,8 @@ public class SignIn extends Activity implements GoogleApiClient.OnConnectionFail
             firebaseAuthWithGoogle(acct);
         } else {
             // Signed out, show unauthenticated UI.
+
+
         }
     }
     // [END handleSignInResult]

@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.frido.MainPictureDisplay"
+            android:name="com.frido.rando.MainPictureDisplay"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_main_picture_display"
             android:parentActivityName="com.frido.rando.Home"
