@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.mobile.frido.rando.SignIn">
+    tools:context="com.frido.rando.SignIn">
 
     <EditText
         android:id="@+id/password"
@@ -29,12 +29,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/signInTitle"
-        android:textAppearance="@android:style/TextAppearance.Material.Display1"
-        android:fontFamily="casual"
-        android:textStyle="normal|bold"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:textAlignment="center" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:fontFamily="casual"
+        android:textSize="34sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold" />
 
     <TextView
         android:text="@string/or"
@@ -42,7 +43,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="89dp"
         android:id="@+id/or"
-        android:textAppearance="@android:style/TextAppearance.Material.Display1"
         android:fontFamily="casual"
         android:textStyle="normal|bold"
         android:textSize="24sp"
@@ -63,7 +63,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/signIn_Firebase"
-        android:elevation="5dp"
         android:layout_below="@+id/password"
         android:layout_alignParentStart="true"
         android:onClick="signInWithFirebase" />
@@ -75,7 +74,7 @@
         android:hint="@string/prompt_email"
         android:inputType="textEmailAddress"
         android:maxLines="1"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="casual"
         android:layout_below="@+id/signInTitle"
         android:layout_alignParentStart="true">

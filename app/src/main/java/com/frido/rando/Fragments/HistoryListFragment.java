@@ -264,7 +264,7 @@ public class HistoryListFragment extends Fragment  {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.history_list_menu,menu);
+        inflater.inflate(R.menu.vorono_history_menu,menu);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:title="Grid"
         android:id="@+id/gridLayout"
         android:icon="@drawable/grid_actionbar"
-        android:showAsAction="always"
+        app:showAsAction="always"
         android:visible="true" />
     <item android:title="VoronoiSwitch"
         android:visible="true"
-        android:showAsAction="always"
+        app:showAsAction="always"
         android:icon="@mipmap/triangles"
         android:id="@+id/voronoiSwitch"
        />

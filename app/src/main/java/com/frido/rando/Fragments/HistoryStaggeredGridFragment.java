@@ -40,7 +40,7 @@ import butterknife.Unbinder;
 /**
  * Created by fjmar on 1/31/2017.
  */
-
+// TODO: 2/18/2017 add multitouch listener to delte
 public class HistoryStaggeredGridFragment extends Fragment {
     private ArrayList<String> listUrls;
     @BindView(R.id.staggeredRecycleView)
@@ -125,7 +125,8 @@ public class HistoryStaggeredGridFragment extends Fragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 
         super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.grid_list_menu,menu);
+        //this will disallow the selection of vornow view  not compatable with lower builds
+        inflater.inflate(R.menu.vorono_history_menu,menu);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -9,51 +9,67 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.mobile.frido.rando.Home"
-    android:background="@drawable/grey_cat">
+    tools:context="com.frido.rando.Home"
+    android:background="@drawable/grey_cat"
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/home_WelcomeRando"
         android:text="@string/home_Welcome"
-        android:textSize="@android:dimen/notification_large_icon_height"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="casual" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/home_PersonalHistory"
-        android:text="@string/home_History"
-        android:onClick="startHistoryActivity"
+        android:layout_alignParentStart="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textSize="56sp"
         android:fontFamily="casual"
-        android:layout_below="@+id/home_WelcomeRando"
-        android:layout_alignStart="@+id/home_Button_Start"
-        android:layout_marginTop="175dp" />
+        android:textStyle="normal|bold"
+        android:textAlignment="center" />
 
-    <Button
-        android:text= "@string/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/logoutButton"
-        android:onClick="logout"
-        android:fontFamily="casual"
-        android:layout_marginTop="29dp"
-        android:layout_below="@+id/home_PersonalHistory"
-        android:layout_alignStart="@+id/home_PersonalHistory" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
-    <Button
+        <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/home_Button_Start"
         android:text="@string/home_Button_Start"
         android:onClick="startMainPictureDisplayActivity"
-        android:layout_marginStart="16dp"
-        android:fontFamily="casual"
-        android:layout_marginBottom="69dp"
-        android:layout_above="@+id/logoutButton"
-        android:layout_alignStart="@+id/home_WelcomeRando" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textSize="14sp"
+        android:layout_above="@+id/home_PersonalHistory"
+        android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_PersonalHistory"
+            android:text="@string/home_History"
+            android:onClick="startHistoryActivity"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textSize="14sp"
+            android:layout_alignBottom="@+id/logoutButton"
+            android:layout_alignStart="@+id/home_Button_Start"
+            ></Button>
+
+        <Button
+            android:text= "@string/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logoutButton"
+            android:onClick="logout"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textSize="14sp"
+            android:layout_below="@+id/home_WelcomeRando"
+            android:layout_alignStart="@+id/home_PersonalHistory">
+
+        </Button>
+
+    </LinearLayout>
 
 </RelativeLayout>

@@ -100,7 +100,7 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
-    <string name="title_activity_image_view_fullscreen">ImageViewFullscreen</string>
+    <string name="title_activity_image_view_fullscreen">Back</string>
     <string name="share">SHARE</string>
     <string name="title_activity_login">Sign in</string>
     <string name="or">Or Sign in with Google</string>

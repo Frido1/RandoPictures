@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cardview_dark_background"
-    tools:context="com.mobile.frido.rando.MainPictureDisplay">
+    tools:context="com.frido.rando.MainPictureDisplay">
 
     <in.arjsna.swipecardlib.SwipeCardView
         android:layout_width="match_parent"

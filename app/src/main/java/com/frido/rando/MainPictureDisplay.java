@@ -155,7 +155,7 @@ public class MainPictureDisplay extends Activity {
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 .build();
         //test id remove before launch
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.setAdUnitId("ca-app-pub-4726911449276237/1864254901");
         requestNewInterstitial();
         mInterstitialAd.setAdListener(new AdListener() {
             @Override

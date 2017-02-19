@@ -5,11 +5,11 @@
 
     <item android:title="Linear"
         android:id="@+id/list_menu_action"
-        android:showAsAction="always"
+        app:showAsAction="always"
         android:icon="@drawable/list_action_bar"/>
     <item android:title="VoronoiSwitch"
         android:visible="true"
-        android:showAsAction="always"
+        app:showAsAction="always"
         android:icon="@mipmap/triangles"
         android:id="@+id/voronoiSwitch"
         android:enabled="true" />
