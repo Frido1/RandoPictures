@@ -3,6 +3,7 @@ package com.frido.rando;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.Editable;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -49,6 +51,7 @@ public class SignIn extends Activity implements GoogleApiClient.OnConnectionFail
     @BindView(R.id.password)
     EditText password;
     @BindView(R.id.signIn_Firebase) Button signInWithFirebaseButton;
+    @BindView(R.id.or)TextView or;
 
 
     @Override
@@ -115,6 +118,12 @@ public class SignIn extends Activity implements GoogleApiClient.OnConnectionFail
         });
 
     ButterKnife.bind(this);
+    // set font
+        Typeface typeface = Typeface.createFromAsset(getAssets(),"fonts/Secret Love.ttf");
+        email.setTypeface(typeface);
+        password.setTypeface(typeface);
+        signInWithFirebaseButton.setTypeface(typeface);
+        or.setTypeface(typeface);
     }
 
 
@@ -123,6 +132,7 @@ public class SignIn extends Activity implements GoogleApiClient.OnConnectionFail
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         Log.d(TAG,"starting sign in");
         startActivityForResult(signInIntent, RC_SIGN_IN);
+        showProgressDialog();
     }
 
 
@@ -130,7 +140,6 @@ public class SignIn extends Activity implements GoogleApiClient.OnConnectionFail
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
@@ -149,6 +158,8 @@ public class SignIn extends Activity implements GoogleApiClient.OnConnectionFail
 
 
         }
+
+
     }
     // [END handleSignInResult]
 
@@ -202,7 +213,6 @@ public class SignIn extends Activity implements GoogleApiClient.OnConnectionFail
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d(TAG, "signInWithCredential:onComplete:" + task.isSuccessful());
-                        FirebaseUser firebaseUser = mAuth.getCurrentUser();
 
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
@@ -212,8 +222,9 @@ public class SignIn extends Activity implements GoogleApiClient.OnConnectionFail
                             Toast.makeText(SignIn.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         }
-                        // ...
+                        hideProgressDialog();
                     }
+
                 });
     }
 

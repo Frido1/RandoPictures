@@ -195,7 +195,7 @@ public class ImageViewFullscreen extends AppCompatActivity {
         // Trigger the initial hide() shortly after the activity has been
         // created, to briefly hint to the user that UI controls
         // are available.
-        delayedHide(100);
+        delayedHide(1000);
     }
 
     @Override
@@ -257,7 +257,7 @@ public class ImageViewFullscreen extends AppCompatActivity {
         sendIntent.setAction(Intent.ACTION_SEND);
         Uri uri = Uri.fromFile(filePath);
         File newFile = new File(context.getFilesDir(),fileName);
-        Uri contentUri = getUriForFile(context,"com.example.frido.rando.fileprovider",newFile);
+        Uri contentUri = getUriForFile(context,"com.frido.rando.fileprovider",newFile);
         String temp = uri.getPath();
         sendIntent.putExtra(Intent.EXTRA_STREAM,contentUri);
         sendIntent.setType("image/*");

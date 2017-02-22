@@ -1,16 +1,22 @@
 package com.frido.rando;
 
+import android.animation.ValueAnimator;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
+import com.airbnb.lottie.LottieComposition;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -35,6 +41,7 @@ public class Home extends Activity {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private String TAG = "Home";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +69,18 @@ public class Home extends Activity {
             }
         };
         MobileAds.initialize(this,"ca-app-pub-4726911449276237~6609498906");
+
+        //set font
+        Typeface typeface = Typeface.createFromAsset(getAssets(),"fonts/Secret Love.ttf");
+        welcomeTitle.setTypeface(typeface);
+        homeButtonStart.setTypeface(typeface);
+        personalHistory.setTypeface(typeface);
+        logoutButton.setTypeface(typeface);
+
+        LottieAnimationView lottieAnimationView = (LottieAnimationView) findViewById(R.id.titleAnimation);
+        lottieAnimationView.setAnimation("RandoTitleAnimation.json");
+        lottieAnimationView.playAnimation();
+        lottieAnimationView.loop(true);
 
     }
 
